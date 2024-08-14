@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photogallery</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+    <link rel="shortcut icon" href="img/favicon.ico" type="favicon">
+    <link rel="icon" href="img/favicon.ico" type="favicon">
+</head>
+<body onload="includeHTML(); render()">
+    <div w3-include-html="./templates/header.html"></div>
+
+    <div class="imgContainer" id="images"></div>
+    <div class="hidden" id="expandedImgBox"></div>
+    
+    <div w3-include-html="./templates/footer.html"></div>
+</body>
+</html>

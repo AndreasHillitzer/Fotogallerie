@@ -1,0 +1,223 @@
+/* cedarville-cursive-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Cedarville Cursive';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/cedarville-cursive-v17-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+body{
+    margin: 0;
+    min-height: 100vH;
+}
+
+html{
+    min-height: 100%;
+    position: relative;
+}
+
+.hidden {
+    display: none;
+}
+
+.imgbox {
+    margin: 10px;
+    cursor: pointer;
+}
+
+.imgbox img {
+    height: 200px;
+    opacity: 0.8;
+    object-fit: cover;
+}
+
+.imgbox img:hover{
+    opacity: 1;
+    transform: scale(1.03);
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+    transition-property: all;
+}
+
+.imgContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.dark-background {
+    background-color: black;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.full-img{
+    max-width: 80%;
+}
+
+.close-img-icon {
+    height: 50px;
+    width: 50px;
+    top: 45px;
+    left: 45px;
+    cursor: pointer;
+    position: fixed;
+}
+
+.next-img-icon {
+    height: 50px;
+    cursor: pointer;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    background-color: rgb(35, 38, 41);
+}
+
+.main-page-icon{
+    height: 50px;
+    margin-right: 5px;
+}
+
+.main-page-link{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+footer{
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    background-color: rgb(35, 38, 41);
+    width: 100%;
+    justify-content: flex-end;
+    height: 100px;
+}
+
+.footer-links{
+    padding-left: 8px;
+    padding-right: 30px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.footer-links:hover {
+    text-decoration: underline;
+    color: orange;
+}
+
+.headline{
+    color: white;
+    font-family: 'Cedarville Cursive', cursive;
+    font-size: 44px;
+    padding-left: 10px;
+}
+
+.impressum {
+    padding-left: 160px;
+    padding-right: 160px;
+    padding-top: 30px;
+    text-align: left;
+    word-wrap: break-word;
+    height: 100vH;
+}
+
+.datenschutz {
+        padding-left: 160px;
+        padding-right: 160px;
+        padding-bottom: 200px;
+        padding-top: 30px;
+        text-align: left;
+        word-wrap: break-word;
+}
+    
+@media(max-width: 775px) {
+    .dark-background{
+        gap: 10px;
+    }
+
+    .next-img-icon {
+        height: 35px;
+    }
+
+    .close-img-icon {
+        height: 35px;
+        width: 35px;
+    }
+
+    .impressum {
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+
+    .datenschutz {
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+    
+}
+
+@media(max-width: 600px) {
+    .full-img {
+        max-width: 100%;
+    }
+
+    .dark-background{
+        flex-direction: column;
+    }
+
+    .next-img-icon {
+        transform: rotate(90deg);
+    }
+
+    .close-img-icon {
+        left: 20px;
+    }
+
+    .imgContainer {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imgbox img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .imgbox {
+        margin: 0;
+    }
+
+
+    .imgbox img:hover {
+        transform: scale(1);
+        transition-duration: 0s;
+        transition-timing-function: none;
+        transition-delay: 0s;
+        transition-property: none;
+    }
+
+    .headline {
+        font-size: 40px;
+    }
+
+    .main-page-icon {
+        height: 45px;
+    }
+
+    .footer-links {
+        padding-left: 0px;
+    }
+}
